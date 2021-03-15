@@ -92,4 +92,4 @@ make a PR.
 ## Phases
 We divide the Tonic UI contribution into two different periods:
 
-### 1. Project Component development:
+#### 1. Component development in the project:
