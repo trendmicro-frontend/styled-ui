@@ -94,4 +94,4 @@ We divide the Tonic UI contribution into two different periods:
 
 ### 1. Component development in the project:
 
-* During the project development, if there is a component or function that does not exist in the [Tonic UI](https://trendmicro-frontend.github.io/styled-ui/getting-started){:target="_blank"}, please develop it by the project developer.
+* During the project development, if there is a component or function that does not exist in the [Tonic UI](https://trendmicro-frontend.github.io/styled-ui/getting-started target="_blank), please develop it by the project developer.
