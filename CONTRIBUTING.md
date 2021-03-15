@@ -39,4 +39,23 @@ Good bug reports are extremely helpful, so thanks!
 
 Guidelines for bug reports:
 
+0. **[Validate your HTML](https://html5.validator.nu/)** to ensure your
+   problem isn't caused by a simple error in your own code.
+
+1. **Use the GitHub issue search** &mdash; check if the issue has already been
+   reported.
+
+2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
+   latest `master` (or `@trendmicro/styled-ui-theme@0.11.0` version) in the repository.
+   
+3. **Isolate the problem** &mdash; ideally create a [reduced test
+   case](https://css-tricks.com/reduced-test-cases/) and a live example.
+   
+A good bug report shouldn't leave others needing to chase you up for more
+information. Please try to be as detailed as possible in your report. What is
+your environment? What steps will reproduce the issue? What browser(s) and OS
+experience the problem? Do other browsers show the bug differently? What
+would you expect to be the outcome? All these details will help people to fix
+any potential bugs.
+
 ## Phases
