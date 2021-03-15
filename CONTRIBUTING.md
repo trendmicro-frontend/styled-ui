@@ -32,4 +32,11 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 
 For a complete look at our labels, see the [project labels page](https://github.com/trendmicro-frontend/styled-ui/labels).
 
+## Bug reports
+
+A bug is a _demonstrable problem_ that is caused by the code in the repository.
+Good bug reports are extremely helpful, so thanks!
+
+Guidelines for bug reports:
+
 ## Phases
