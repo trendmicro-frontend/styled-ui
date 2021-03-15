@@ -90,3 +90,4 @@ things, or things that don't require a lot of your time, you can go ahead and
 make a PR.
 
 ## Phases
+We divide the Tonic UI contribution into two different periods:
