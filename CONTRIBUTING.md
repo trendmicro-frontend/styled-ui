@@ -76,4 +76,10 @@ Example:
 > causing the bug, and potential solutions (and your opinions on their
 > merits).
 
+## Pull requests
+
+Good pull requests—patches, improvements, new features—are a fantastic
+help. They should remain focused in scope and avoid containing unrelated
+commits.
+
 ## Phases
