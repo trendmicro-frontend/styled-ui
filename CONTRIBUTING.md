@@ -29,7 +29,7 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 - `build (ci/cd)` - Issues with our build system, which is used to run all our tests, concatenate and compile source files, and more.
 - `help wanted` - Issues we need or would love help from the community to resolve.
 - `duplicate` - Issue or pull request already exists.
-- 
+
 For a complete look at our labels, see the [project labels page](https://github.com/trendmicro-frontend/styled-ui/labels).
 
 ## Phases
