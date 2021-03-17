@@ -98,7 +98,8 @@ project's developers might not want to merge into the project. For trivial
 things, or things that don't require a lot of your time, you can go ahead and
 make a PR.
 
-Please adhere to the coding guidelines used throughout the project (indentation, accurate comments, etc.) and any other requirements.
+Please adhere to the [coding guidelines](#code-guidelines) used throughout the
+project (indentation, accurate comments, etc.) and any other requirements.
 
 ## Phases
 We divide the Tonic UI contribution into two different periods:
