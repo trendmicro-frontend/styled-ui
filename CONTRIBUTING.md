@@ -6,7 +6,7 @@ Following these guidelines helps to communicate that you respect the time of the
 The [Phases](#Phases) part of this contribution guide is only for Trend Micro’s internal compliance. If you are a Trend Micro engineer, please be sure to read it.
 
 ## Using the issue tracker
-The [issue tracker](https://github.com/twbs/styled-ui/issues) is
+The [issue tracker](https://github.com/trendmicro-frontend/styled-ui/issues) is
 the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests)
 and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
