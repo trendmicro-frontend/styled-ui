@@ -3,7 +3,7 @@ Looking to contribute something to Tonic UI? Here's how you can help.
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue or assessing patches and features.
 
-For Trend Micro’s internal compliance, if you are a Trend Micro engineer, please be sure to [read](./TrendMicro_CONTRIBUTING) it.
+For Trend Micro’s internal compliance, if you are a Trend Micro engineer, please be sure to [read](./TrendMicro_CONTRIBUTING.md) it.
 
 ## Using the issue tracker
 The [issue tracker](https://github.com/trendmicro-frontend/styled-ui/issues) is
