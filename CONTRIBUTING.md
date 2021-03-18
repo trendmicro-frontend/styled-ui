@@ -123,3 +123,9 @@ We divide the Tonic UI contribution into two different periods:
 * In addition to the quality and performance of the components, the "code review" also focuses on the scalability of functions.
 
 * In addition to the component, it needs to be discussed how to present it on Tonic UI and the examples.
+
+## License
+
+By contributing your code, you agree to license your contribution under the [MIT License](../LICENSE).
+By contributing to the documentation, you agree to license your contribution under the [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/).
+
