@@ -118,5 +118,7 @@ We divide the Tonic UI contribution into two different periods:
 
 * Once the component is developed, please separate it from the project and move it to the [CodeSandbox](https://codesandbox.io/) for review and discussion.
 
-* Request a component contribution to [Tonic UI](https://trendmicro-frontend.slack.com/archives/C01R2AQR6TH), and then we will arrange for review and discussion
+* Request a component contribution to [Tonic UI](https://trendmicro-frontend.slack.com/archives/C01R2AQR6TH), and then we will arrange for review and discussion.
+
+* In addition to the quality and performance of the components, the "code review" also focuses on the scalability of functions.
 
