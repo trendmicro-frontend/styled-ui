@@ -111,3 +111,5 @@ We divide the Tonic UI contribution into two different periods:
 * Tonic UI is developed based on technologies such as [React](https://reactjs.org/), [React Hooks](https://reactjs.org/docs/hooks-intro.html), [Styled System](https://styled-system.com/), [Styled Components](https://styled-components.com/), and [Emotion](https://emotion.sh/docs/introduction), so familiarity with these technologies is necessary.
 
 * For the trace ticket when developing the component, please create it in the Jira system of the own project, and select the `vt-fed` tag in the TM Team field for effort management of contributions.
+
+* Please frontend mentor assist the member in developing the component.
