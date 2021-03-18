@@ -122,3 +122,4 @@ We divide the Tonic UI contribution into two different periods:
 
 * In addition to the quality and performance of the components, the "code review" also focuses on the scalability of functions.
 
+* In addition to the component, it needs to be discussed how to present it on Tonic UI and the examples.
