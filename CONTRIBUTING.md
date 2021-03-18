@@ -12,7 +12,7 @@ and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
 
 * Please **do not** use the issue tracker for personal support requests.
-  [Slack](https://trendmicro-frontend.slack.com/archives/C01R2AQR6TH) are better places to get help.
+  [Slack](https://trendmicro-frontend.slack.com/archives/C01R2AQR6TH) is better places to get help.
 
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
