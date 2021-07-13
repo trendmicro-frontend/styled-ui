@@ -2,72 +2,14 @@
 
 A toast notification is a short message that displays at the  side of the screen and disappears automatically after a few seconds. A toast notification is a status update about an operation for which the current activity remains visibility and interactive. Basically, a toast notification is used inform the user of something that is not critical and that does not require specific attention, and does not prevent the user from using the app.
 
-### Prerequisite
-
-A `Toast` element can be used with the `useToast` hook to trigger a toast notification.
-
-## Example of `useToast`
-
-```js readOnly
-import React, { useCallback } from 'react';
-import toaster from 'toasted-notes';
-import {
-  ColorModeProvider,
-  ColorStyleProvider,
-  ThemeProvider,
-  useColorMode,
-  useTheme,
-} from '@trendmicro/react-styled-ui';
-
-const useToast = () => {
-  const theme = useTheme();
-  const [colorMode] = useColorMode();
-  const notify = useCallback(
-    ({
-      position = 'top',
-      duration = 5000,
-      render,
-    }) => {
-      const options = {
-        position,
-        duration,
-      };
-
-      if (typeof render !== 'function') {
-        return null;
-      }
-
-      return toaster.notify(
-        ({ id, onClose }) => (
-          <ThemeProvider theme={theme}>
-            <ColorModeProvider value={colorMode}>
-              <ColorStyleProvider>
-                {render({ id, onClose, position, duration })}
-              </ColorStyleProvider>
-            </ColorModeProvider>
-          </ThemeProvider>
-        ),
-        options,
-      );
-    },
-    [theme, colorMode],
-  );
-  const closeAll = toaster.closeAll;
-
-  return {
-    closeAll,
-    notify,
-  };
-};
-
-export default useToast;
-
-```
-
 ## Import
 
 ```js
-import { Toast } from '@trendmicro/react-styled-ui';
+import {
+  Toast,
+  ToastProvider,
+  useToast,
+} from '@trendmicro/react-styled-ui';
 ```
 
 ## Usage
@@ -178,25 +120,24 @@ const ToastLayout = (props) => {
 function Example() {
   const toast = useToast();
   const handleClickBy = (ToastNotification) => () => {
-    toast.notify({
-      position: 'bottom-right',
-      duration: 5000,
-      render: ({ onClose, position }) => {
-        const styleProps = {
-          'top-left': { mt: '2x', mx: '4x' },
-          'top': { mt: '2x', mx: '4x' },
-          'top-right': { mt: '2x', mx: '4x' },
-          'bottom-left': { mb: '2x', mx: '4x' },
-          'bottom': { mb: '2x', mx: '4x' },
-          'bottom-right': { mb: '2x', mx: '4x' },
-        }[position];
+    toast(({ onClose, placement }) => {
+      const styleProps = {
+        'top-left': { mt: '2x', mx: '4x' },
+        'top': { mt: '2x', mx: '4x' },
+        'top-right': { mt: '2x', mx: '4x' },
+        'bottom-left': { mb: '2x', mx: '4x' },
+        'bottom': { mb: '2x', mx: '4x' },
+        'bottom-right': { mb: '2x', mx: '4x' },
+      }[placement];
 
-        return (
-          <ToastLayout {...styleProps}>
-            <ToastNotification onClose={onClose} />
-          </ToastLayout>
-        );
-      },
+      return (
+        <ToastLayout {...styleProps}>
+          <ToastNotification onClose={onClose} />
+        </ToastLayout>
+      );
+    }, {
+      placement: 'bottom-right',
+      duration: 5000,
     });
   };
 
@@ -342,25 +283,24 @@ const ToastLayout = (props) => {
 function Example() {
   const toast = useToast();
   const handleClickBy = (ToastNotification) => () => {
-    toast.notify({
-      position: 'bottom-right',
-      duration: 5000,
-      render: ({ onClose, position }) => {
-        const styleProps = {
-          'top-left': { mt: '2x', mx: '4x' },
-          'top': { mt: '2x', mx: '4x' },
-          'top-right': { mt: '2x', mx: '4x' },
-          'bottom-left': { mb: '2x', mx: '4x' },
-          'bottom': { mb: '2x', mx: '4x' },
-          'bottom-right': { mb: '2x', mx: '4x' },
-        }[position];
+    toast(({ onClose, placement }) => {
+      const styleProps = {
+        'top-left': { mt: '2x', mx: '4x' },
+        'top': { mt: '2x', mx: '4x' },
+        'top-right': { mt: '2x', mx: '4x' },
+        'bottom-left': { mb: '2x', mx: '4x' },
+        'bottom': { mb: '2x', mx: '4x' },
+        'bottom-right': { mb: '2x', mx: '4x' },
+      }[placement];
 
-        return (
-          <ToastLayout {...styleProps}>
-            <ToastNotification onClose={onClose} />
-          </ToastLayout>
-        );
-      },
+      return (
+        <ToastLayout {...styleProps}>
+          <ToastNotification onClose={onClose} />
+        </ToastLayout>
+      );
+    }, {
+      placement: 'bottom-right',
+      duration: 5000,
     });
   };
   const toastComponents = [
@@ -459,25 +399,24 @@ const ToastLayout = (props) => {
 function Example() {
   const toast = useToast();
   const handleClickBy = (ToastNotification) => () => {
-    toast.notify({
-      position: 'bottom-right',
-      duration: 5000,
-      render: ({ onClose, position }) => {
-        const styleProps = {
-          'top-left': { mt: '2x', mx: '4x' },
-          'top': { mt: '2x', mx: '4x' },
-          'top-right': { mt: '2x', mx: '4x' },
-          'bottom-left': { mb: '2x', mx: '4x' },
-          'bottom': { mb: '2x', mx: '4x' },
-          'bottom-right': { mb: '2x', mx: '4x' },
-        }[position];
+    toast(({ onClose, placement }) => {
+      const styleProps = {
+        'top-left': { mt: '2x', mx: '4x' },
+        'top': { mt: '2x', mx: '4x' },
+        'top-right': { mt: '2x', mx: '4x' },
+        'bottom-left': { mb: '2x', mx: '4x' },
+        'bottom': { mb: '2x', mx: '4x' },
+        'bottom-right': { mb: '2x', mx: '4x' },
+      }[placement];
 
-        return (
-          <ToastLayout {...styleProps}>
-            <ToastNotification onClose={onClose} />
-          </ToastLayout>
-        );
-      },
+      return (
+        <ToastLayout {...styleProps}>
+          <ToastNotification onClose={onClose} />
+        </ToastLayout>
+      );
+    }, {
+      placement: 'bottom-right',
+      duration: 5000,
     });
   };
   const alertToasts = [
