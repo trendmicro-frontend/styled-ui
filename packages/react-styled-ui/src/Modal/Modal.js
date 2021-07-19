@@ -1,7 +1,8 @@
 import FocusLock from 'react-focus-lock/dist/cjs';
 import memoize from 'micro-memoize';
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Portal from '../Portal';
+import Presence from '../Presence';
 import config from '../shared/config';
 import { useId } from '../utils/autoId';
 import useNodeRef from '../utils/useNodeRef';
@@ -24,6 +25,7 @@ const Modal = ({
   id,
   children,
 }) => {
+  const [isMounted, setMounted] = useState(isOpen);
   const defaultId = useId();
   const contentRef = useRef(null);
   const modalState = getMemoizedState({
@@ -44,7 +46,7 @@ const Modal = ({
   id = id ?? defaultId;
   const portalId = `${config.name}:portal-${id}`;
   const mountRef = useNodeRef({
-    isOpen,
+    isOpen: isMounted,
     id: portalId,
   });
 
@@ -78,24 +80,37 @@ const Modal = ({
       }
     }
   }, [finalFocusRef]);
+  const onExitComplete = useCallback(() => {
+    setMounted(false);
+  }, [setMounted]);
 
-  if (!isOpen) {
-    return null;
-  }
+  useEffect(() => {
+    if (isOpen && !isMounted) {
+      setMounted(true);
+      return;
+    }
+  }, [isOpen, isMounted]);
 
   return (
     <ModalProvider value={modalState}>
-      <Portal container={mountRef.current}>
-        <FocusLock
-          disabled={!ensureFocus}
-          autoFocus={autoFocus}
-          returnFocus={returnFocus}
-          onActivation={onFocusLockActivation}
-          onDeactivation={onFocusLockDeactivation}
-        >
-          {children}
-        </FocusLock>
-      </Portal>
+      <Presence
+        isPresent={isOpen}
+        onExitComplete={onExitComplete}
+      >
+        {isMounted && (
+          <Portal container={mountRef.current}>
+            <FocusLock
+              disabled={!ensureFocus}
+              autoFocus={autoFocus}
+              returnFocus={returnFocus}
+              onActivation={onFocusLockActivation}
+              onDeactivation={onFocusLockDeactivation}
+            >
+              {children}
+            </FocusLock>
+          </Portal>
+        )}
+      </Presence>
     </ModalProvider>
   );
 };

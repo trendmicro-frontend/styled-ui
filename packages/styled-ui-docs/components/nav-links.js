@@ -24,11 +24,9 @@ export const componentLinks = [
   'ButtonGroup',
   'Checkbox',
   'CheckboxGroup',
-  'Collapse',
   'CSSBaseline',
   'Divider',
   'Drawer',
-  'Fade',
   'FlatButton',
   'Flex',
   'Grid',
@@ -62,7 +60,7 @@ export const componentLinks = [
   'Toast',
   'ToggleSwitch',
   'Tooltip',
-  'Transition',
+  'Transitions',
 ];
 
 export const utilityLinks = [

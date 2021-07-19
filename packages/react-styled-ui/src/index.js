@@ -6,14 +6,12 @@ import ButtonBase from './ButtonBase';
 import ButtonGroup from './ButtonGroup';
 import Checkbox from './Checkbox';
 import CheckboxGroup from './CheckboxGroup';
-import Collapse from './Collapse';
 import ColorModeProvider from './ColorModeProvider';
 import ColorStyleProvider from './ColorStyleProvider';
 import ControlBox from './ControlBox';
 import CSSBaseline from './CSSBaseline';
 import DarkMode from './DarkMode';
 import Divider from './Divider';
-import Fade from './Fade';
 import FlatButton from './FlatButton';
 import Flex from './Flex';
 import Grid from './Grid';
@@ -30,6 +28,7 @@ import Link from './Link';
 import LinkButton from './LinkButton';
 import MenuButton from './MenuButton';
 import Pagination from './Pagination';
+import Presence from './Presence';
 import PseudoBox from './PseudoBox';
 import Radio from './Radio';
 import RadioGroup from './RadioGroup';
@@ -56,6 +55,7 @@ import useColorMode from './useColorMode';
 import useColorStyle from './useColorStyle';
 import useDisclosure from './useDisclosure';
 import usePagination from './usePagination';
+import usePresence from './usePresence';
 import useTheme from './useTheme';
 import withTheme from './withTheme';
 
@@ -68,14 +68,12 @@ export {
   ButtonGroup,
   Checkbox,
   CheckboxGroup,
-  Collapse,
   ColorModeProvider,
   ColorStyleProvider,
   ControlBox,
   CSSBaseline,
   DarkMode,
   Divider,
-  Fade,
   FlatButton,
   Flex,
   Grid,
@@ -92,6 +90,7 @@ export {
   LinkButton,
   MenuButton,
   Pagination,
+  Presence,
   PseudoBox,
   Radio,
   RadioGroup,
@@ -118,6 +117,7 @@ export {
   useColorStyle,
   useDisclosure,
   usePagination,
+  usePresence,
   useTheme,
   withTheme,
 };
@@ -128,6 +128,7 @@ export * from './Drawer';
 export * from './Menu';
 export * from './Modal';
 export * from './Popover';
+export * from './Popper';
 export * from './Select';
 export * from './Table';
-export * from './Transition';
+export * from './Transitions';
